@@ -31,6 +31,6 @@ jobs:
         scp -i private_key -o StrictHostKeyChecking=no docker-compose.yml $USER@$HOST:/home/$USER/
         ssh -i private_key -o StrictHostKeyChecking=no $USER@$HOST '
           git clone https://github.com/HimanshuSingh1706/Three-Tier-application-Assignment.git
-          sudo DB_PASSWORD=${{ secrets.DB_PASSWORD }} Three-Tier-application-Assignment/docker-compose up -d
+          ls -ltr
         '
         rm -f private_key
